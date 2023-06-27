@@ -20,74 +20,75 @@
   </head>
   <body>
     <div class="container">
-      <div class="weatherapp-wrp">
-        <div class="weatherapp">
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
           <div class="row">
-            <div class="col-2">Lisbon</div>
-            <div class="col-2">Paris</div>
-            <div class="col-2">Sydney</div>
-            <div class="col-2">Nigeria</div>
+            <div class="col-md-6">
+              <input
+                type="search"
+                placeholder="Type a city.."
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm city"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary shadow-sm"
+              />
+            </div>
           </div>
-          <form class="search-form" id="search-form">
-            <div class="row">
-              <div class="col-md-6">
-                <input
-                  type="search"
-                  placeholder="Type a city.."
-                  autofocus="on"
-                  autocomplete="off"
-                  id="city-input"
-                  class="form-control shadow-sm city"
-                />
-              </div>
-              <div class="col-3">
-                <input
-                  type="submit"
-                  value="Search"
-                  class="form-control btn btn-primary shadow-sm"
-                />
+        </form>
+        <div class="col-3">
+          <button
+            class="btn btn-success w-100 proder"
+            id="current-location-button"
+          >
+            Current
+          </button>
+        </div>
+
+        <h1 id="city"></h1>
+        <ul>
+          <li id="date"></li>
+          <li id="description"></li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix weather-temperature">
+              <div class="float-left">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <span class="temperature"
+                  ><strong id="temperature"></strong></span
+                ><span class="units"
+                  ><a href="" id="celcius-link" class="active"> °C </a>/<a
+                    href="#"
+                    id="fahrenheit-link"
+                    >°F</a
+                  ></span
+                >
               </div>
             </div>
-          </form>
-          <div class="col-3">
-            <button
-              class="btn btn-success w-100 proder"
-              id="current-location-button"
-            >
-              Current
-            </button>
           </div>
 
-          <h3 id="place">Lisbon</h3>
-          <div class="float-left">
-            <span class="temperature" id="temperature">
-              <h1>
-                &#x26C5; <span id="temperature-value">19</span
-                ><span class="units">°C</span>
-              </h1>
-            </span>
+          <div class="col-6">
+            <ul>
+              <li><span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
           </div>
-
-          <p>
-            <span id="date-display">Wednesday 1:45</span>
-            <br />
-            <span id="description">Clear</span>
-            <br />
-            <span id="humidity">Humidity</span>%
-            <br />
-
-            <span id="precipitation">Precipitation</span>
-          </p>
-          <br />
         </div>
-        <small class="author-info">
-          <a
-            href="https://github.com/Tohan-B/SheCodes-Weather-app"
-            target="_blank"
-            >Open-source code</a
-          >, by Blessing Itohan
-        </small>
       </div>
+      <small class="author-info">
+        <a
+          href="https://github.com/Tohan-B/SheCodes-Weather-app"
+          target="_blank"
+          >Open-source code</a
+        >, by Blessing Itohan
+      </small>
     </div>
     <script src="index.js"></script>
   </body>
