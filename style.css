@@ -24,6 +24,14 @@ li {
   list-style: none;
 }
 
+.button-color {
+  background-color: #6882bb;
+}
+
+.proder {
+  background-color: #78a7d3;
+}
+
 .weather-app {
   border: 1px solid #dadde1;
   padding: 15px;
@@ -73,7 +81,7 @@ li {
   margin-bottom: 0px;
   padding-left: 10px;
   font-size: 16px;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 .weather-forecast {
@@ -84,4 +92,7 @@ li {
 
 .weather-forecast-temperature-min {
   opacity: 0.5;
+}
+.writeup-color {
+  color: #8b307f;
 }

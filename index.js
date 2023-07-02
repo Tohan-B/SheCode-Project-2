@@ -42,7 +42,9 @@ function displayForecast(response) {
         forecastHTML +
         `
     <div class="col-2">
-        <div class="weather-forecast-day">${formatDay(forecastDay.dt)}</div>
+        <div class="weather-forecast-day" style="color: #6882bb">${formatDay(
+          forecastDay.dt
+        )}</div>
         <img
           src="http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
@@ -52,10 +54,10 @@ function displayForecast(response) {
           width="40px"
         />
         <div class="weather-forecast-temperature">
-          <span class="weather-forecast-temperature-max">${Math.round(
+          <span class="weather-forecast-temperature-max" style="color: #8B307F">${Math.round(
             forecastDay.temp.max
           )}°</span>
-          <span class="weather-forecast-temperature-min">${Math.round(
+          <span class="weather-forecast-temperature-min" style="color: #8B307F">${Math.round(
             forecastDay.temp.min
           )}°</span>
         </div>
@@ -84,7 +86,8 @@ function displayWeather(response) {
 
   let humidityResponse = Math.round(response.data.wind.speed);
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = `Humidity: ${humidityResponse}`;
+  humidityElement.innerHTML = humidityResponse;
+  humidityElement.style.color = "#8b307f";
 
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].main;
@@ -94,6 +97,7 @@ function displayWeather(response) {
 
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed * 3.6);
+  windElement.style.color = "#8b307f";
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
