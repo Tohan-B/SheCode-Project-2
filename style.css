@@ -68,3 +68,8 @@ li {
 .author-info {
   margin-left: 150px;
 }
+
+.weather-forecast-day {
+  margin-bottom: 0px;
+  padding-left: 10px;
+}

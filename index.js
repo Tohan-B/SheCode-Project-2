@@ -23,6 +23,30 @@ function getDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+
+  let forecastHTML = "";
+  forecastHTML = `
+    <div class="row">
+      <div class="col-2">
+        <p class="weather-forecast-day">Mon</p>
+        <img
+          src="http://openweathermap.org/img/wn/10d@2x.png"
+          alt="emoji"
+          class="image"
+          width="40px"
+        />
+        <div class="weather-forecast-temperature">
+          <span class="weather-forecast-temperature-max">17°</span>
+          <span class="weather-forecast-temperature-min">16°</span>
+        </div>
+      </div>
+    </div>
+  `;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeather(response) {
   celciusTemperature = response.data.main.temp;
 
@@ -88,6 +112,7 @@ dateElement.innerHTML = getDate(currentTime);
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
+displayForecast();
 searchCity("Lagos");
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
