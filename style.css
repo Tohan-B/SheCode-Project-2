@@ -27,7 +27,7 @@ li {
 .weather-app {
   border: 1px solid #dadde1;
   padding: 15px;
-  margin: 150px 150px 10px 150px;
+  margin: 100px 150px 10px 250px;
   border-radius: 10px;
   max-width: 600px;
 }
@@ -66,10 +66,22 @@ li {
 }
 
 .author-info {
-  margin-left: 150px;
+  margin-left: 250px;
 }
 
 .weather-forecast-day {
   margin-bottom: 0px;
   padding-left: 10px;
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }
