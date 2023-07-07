@@ -96,3 +96,46 @@ li {
 .writeup-color {
   color: #8b307f;
 }
+
+/* Media Queries */
+
+/* For screens up to 767px */
+@media (max-width: 767px) {
+  .weather-app {
+    margin: 50px 20px;
+    max-width: 100%;
+  }
+
+  .weather-temperature img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .weather-temperature strong {
+    font-size: 48px;
+  }
+
+  .weather-temperature .units {
+    font-size: 12px;
+    top: -24px;
+  }
+
+  .search-form {
+    margin-bottom: 10px;
+  }
+
+  .author-info {
+    margin-left: 20px;
+  }
+
+  .weather-forecast-day {
+    font-size: 14px;
+  }
+}
+
+/* For screens from 768px and above */
+@media (min-width: 768px) {
+  .weather-app {
+    margin: 100px 150px 10px 250px;
+  }
+}
